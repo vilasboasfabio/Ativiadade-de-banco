@@ -144,7 +144,6 @@ app.get('/', async (req, res) => {
   res.send("Fábio está mandando o feitiço: " + randomPhrase);
 });
 
-
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}✨`);
 });
