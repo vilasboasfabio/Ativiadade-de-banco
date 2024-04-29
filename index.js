@@ -121,6 +121,29 @@ app.delete('/varinhas/:id', async (req, res) => {
   }
 });
 
+app.get('/', async (req, res) => {
+  const frases = [
+    "Diga alguma coisa que eu não saiba",
+    "Recalque de mandada eu tiro debochando",
+    "Eu sou uma bruxa, não uma babá",
+    "Beijinho no ombro que o recalque passa longe",
+    "Eu não sou obrigada a nada",
+    "Eu sou a rainha da porra toda",
+    "Eu não sou capaz de lidar com isso",
+    "Pegue amasse e jogue fora",
+    "Mata ele, frita ele, faz pure",
+    "Macumba sarava, me erra e vá se lascar",
+    "E ai bichan",
+    "Eu sou a própria bruxa do 71",
+    "Quem com lacre lacra, com o lacre será lacrado",
+    "Transborde mona, quem não souber nada que se afogue na sua marra"
+  ];
+
+  const randomIndex = Math.floor(Math.random() * frases.length);
+  const randomPhrase = frases[randomIndex];
+  res.send("Fábio está mandando o feitiço: " + randomPhrase);
+});
+
 
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}✨`);
